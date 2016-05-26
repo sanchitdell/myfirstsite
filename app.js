@@ -5,6 +5,7 @@ var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
 var app = express()
+app.set('port', (process.env.PORT || 5000));
 var basicAuth = require('basic-auth');
 
 var auth = function (req, res, next) {
@@ -45,5 +46,8 @@ app.get('/', auth, function (req, res) {
     { title: 'Home' }
     )
 })
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
 
-app.listen(3000)
+
