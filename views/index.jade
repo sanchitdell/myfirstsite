@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+
+  
+  
+  form(name="add-estimation", id="testing")
+  div.input
+            span.label Mobile
+            input(type="text", name="title" id="mobile")
+  div.input
+            span.label Day Number
+            input(type="text", name="title" id="day")
+        div.input
+            span.label Time in Hour
+            input(type="text", name="title" id="tih")
+        div.input
+            span.label Time In Minute
+            input(name="description", id="tim")
+
+        div.actions
+            input(type="submit", value="add", id="testingHit")
